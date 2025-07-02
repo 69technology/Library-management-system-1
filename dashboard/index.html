@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="../assets/styles.css"/>
 </head>
 <body>
+    <div class="hamburger" onclick="toggleSidebar()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
   <div class="dashboard">
     <nav class="sidebar">
       <!-- Company Logo -->
@@ -32,5 +38,12 @@
       <p>This is your CEO Library management dashboard. Use the sidebar to navigate.</p>
     </main>
   </div>
+</body>
+<script>
+  function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
