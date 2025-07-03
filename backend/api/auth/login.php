@@ -4,11 +4,11 @@ header("Content-Type: application/json");
 include_once '../../config/database.php';
 include_once '../../models/User.php';
 
-$data = json_decode(file_get_content("php://input"));
+$data = json_decode(file_get_contents("php://input"));
 
 if (empty($data->name) || empty($data->pwd)) {
     http_response_code(400);
-    echo json_decode(["message" => "Name and password required"]);
+    echo json_encode(["message" => "Name and password required"]);
     exit;
 }
 
