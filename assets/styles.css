@@ -4,11 +4,40 @@ body {
     background:f8f9a;
     color:212529;
 }
+.auth-header {
+  background-color: #B6F500;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.auth-header .logo img {
+  height: 50px;
+}
+
+.auth-footer {
+  background-color: #B6F500;
+  text-align: center;
+  padding: 15px 0;
+  color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.auth-container {
+  min-height: calc(100vh - 120px); /* space for header+footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
 
 .logo img {
     width: 120px;
     display:block;
     margin: 0 auto 20px
+    height: 50px;
 }
 .container {
     width:350px;
@@ -63,6 +92,15 @@ body {
     color: #fff;
     padding: 20px;
     flex-shrink: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;  
+    height: 100%;
+    overflow-y: auto;
+    max-height:100vh;
+    scroll-behavior: smooth;
+
 }
 
 .sidebar {
@@ -125,9 +163,11 @@ body {
   width: 240px;
   background: #B6F500;
   color: #fff;
-  padding: 20px;
+  padding: 15px 20px;
   flex-shrink: 0;
   transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+
 }
 
 .sidebar h2 {
